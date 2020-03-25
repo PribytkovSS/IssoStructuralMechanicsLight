@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IssoStMechLight.Views.NodesPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="GroupHeaderStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding NodeList}" SeparatorVisibility="Default">
+            <ListView.Header>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Узлы" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Style="{DynamicResource SubtitleStyle}"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="№" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Label Text="Координаты" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource GroupHeaderStyle}"
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Label Text="X" Grid.Row="1" Grid.Column="1" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Label Text="Y" Grid.Row="1" Grid.Column="2" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Label Text="Запреты" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" Style="{StaticResource GroupHeaderStyle}"
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Label Text="X" Grid.Row="1" Grid.Column="3" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Label Text="Y" Grid.Row="1" Grid.Column="4" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Label Text="Поворот" Grid.Row="1" Grid.Column="5" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding NodeIndex}" Grid.Column="0" Grid.Row="0" 
+                                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding X, StringFormat='{0:#0.000}'}" Grid.Row="0" Grid.Column="1"  
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Y, StringFormat='{0:#0.000}'}" Grid.Row="0" Grid.Column="2" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <CheckBox IsChecked="{Binding Xrestrained}" Grid.Column="3" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <CheckBox IsChecked="{Binding Yrestrained}" Grid.Column="4" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <CheckBox IsChecked="{Binding Rrestrained}" Grid.Column="5" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

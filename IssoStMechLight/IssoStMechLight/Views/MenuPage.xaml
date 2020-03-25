@@ -2,15 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IssoStMechLight.Views.MenuPage"
-             Title="Menu">
-    <StackLayout VerticalOptions="FillAndExpand">
+             Title="Меню">
+    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="10">
-                            <Label Text="{Binding Title}" FontSize="20"/>
+                            <Label Text="{Binding Title}" FontSize="Medium" WidthRequest="150"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

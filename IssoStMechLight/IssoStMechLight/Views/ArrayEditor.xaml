@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IssoStMechLight.Views.ArrayEditor">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="GroupHeaderStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+      <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Text="По горизонтали" Style="{StaticResource GroupHeaderStyle}"
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" Text="По вертикали" Style="{StaticResource GroupHeaderStyle}"
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                <Label Text="Кол-во:" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                <Entry Text="{Binding ArrayHorizontalCount}" Placeholder="К-во" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" Keyboard="Numeric"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                <Label Text="Шаг:" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                <Entry Placeholder="Шаг" Text="{Binding ArrayHorizontalStep}" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" Keyboard="Numeric"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+                <Label Text="Кол-во:" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                <Entry Placeholder="К-во" Text="{Binding ArrayVerticalCount}" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" Keyboard="Numeric"/>
+            </StackLayout>
+            <StackLayout Grid.Column="3" Grid.Row="1"  Orientation="Horizontal">
+                <Label Text="Шаг:" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                <Entry Placeholder="Шаг" Text="{Binding ArrayVerticalStep}" Margin="2" HorizontalOptions="Center" VerticalOptions="Center" Keyboard="Numeric"/>
+            </StackLayout>
+            <Button x:Name="CreateArrayBtn" Grid.Column="4" Grid.Row="0" Grid.RowSpan="2" Text="Создать" Pressed="CreateArrayBtn_Pressed"
+                    HorizontalOptions="Center" VerticalOptions="Center" Margin="5" BackgroundColor="CornflowerBlue" TextColor="White"/>
+            <Button x:Name="CancelBtn" Grid.Column="5" Grid.Row="0" Grid.RowSpan="2" Text="Отмена" Pressed="CancelBtn_Pressed"
+                    HorizontalOptions="Center" VerticalOptions="Center" Margin="5"
+                    BackgroundColor="White" BorderColor="Black" TextColor="Black"/>
+        </Grid>
+  </ContentView.Content>
+</ContentView>

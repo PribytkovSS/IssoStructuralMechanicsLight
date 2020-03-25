@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IssoStMechLight.Views.ResultsPage">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" VerticalScrollBarVisibility="Default">
+            <StackLayout>
+                <Label Text="Перемещения" TextColor="White" BackgroundColor="DimGray" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                <Grid x:Name="DisplacementsGrid" BackgroundColor="CornflowerBlue" ColumnSpacing="1" RowSpacing="1"></Grid>
+                <Label Text="Изгибающие моменты" TextColor="White" BackgroundColor="DimGray" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                <Grid x:Name="MomentsGrid" BackgroundColor="CornflowerBlue" ColumnSpacing="1" RowSpacing="1"></Grid>
+                <Label Text="Поперечные силы" TextColor="White" BackgroundColor="DimGray" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                <Grid x:Name="ShearForceGrid" BackgroundColor="CornflowerBlue" ColumnSpacing="1" RowSpacing="1"></Grid>
+                <Label Text="Продольные силы" TextColor="White" BackgroundColor="DimGray" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+                <Grid x:Name="AxialForceGrid" BackgroundColor="CornflowerBlue" ColumnSpacing="1" RowSpacing="1"></Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

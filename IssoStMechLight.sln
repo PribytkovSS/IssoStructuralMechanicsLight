@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssoStMechLight.iOS", "Isso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssoStMechLight.UWP", "IssoStMechLight\IssoStMechLight.UWP\IssoStMechLight.UWP.csproj", "{29D15410-63DF-41A8-98B0-D2966855696A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssoStMechLight", "IssoStMechLight\IssoStMechLight\IssoStMechLight.csproj", "{E81B6893-D7F6-408B-80E9-9E4F7D39BB57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IssoStMechLight", "IssoStMechLight\IssoStMechLight\IssoStMechLight.csproj", "{E81B6893-D7F6-408B-80E9-9E4F7D39BB57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

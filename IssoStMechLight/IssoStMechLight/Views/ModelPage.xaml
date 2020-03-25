@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:issoview="clr-namespace:IssoStMechLight.Views"
+             xmlns:tbs="clr-namespace:IssoStMechLight.Views"
+             x:Class="IssoStMechLight.Views.ModelPage" Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <StackLayout x:Name="ModelPageLayout" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <FlexLayout x:Name="ModelToolBar" HorizontalOptions="Start" VerticalOptions="Start">
+                <ImageButton x:Name="ButtonNew" Pressed="ButtonNew_Clicked" 
+                             Source="{Binding NewModelImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                <ImageButton x:Name="ButtonOpen" Pressed="ButtonOpen_Pressed" 
+                             Source="{Binding OpenImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                <ImageButton x:Name="ButtonSave" Pressed="ButtonSave_Pressed" 
+                             Source="{Binding SaveImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                <ImageButton x:Name="ButtonUndo" Pressed="ButtonUndo_Pressed" 
+                             Source="{Binding UndoImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                <ImageButton x:Name="ButtonRedo" Pressed="ButtonRedo_Pressed" 
+                             Source="{Binding RedoImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                <ImageButton x:Name="ButtonLinear" Pressed="ButtonLinear_Clicked" 
+                             Source="{Binding LinearImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+                <ImageButton x:Name="ButtonDimension" Pressed="ButtonDim_Clicked" 
+                             Source="{Binding HorizDimensionImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+                <ImageButton x:Name="ButtonDimensionV" Pressed="ButtonDim_Clicked" 
+                             Source="{Binding VertDimensionImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+                <ImageButton x:Name="ButtonForce" Pressed="ButtonForce_Clicked" 
+                             Source="{Binding ForceImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+                <ImageButton x:Name="ButtonDstLoad" Pressed="ButtonDstLoad_Clicked" 
+                             Source="{Binding DistLoadImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+                <ImageButton x:Name="BtnZoomAll" Pressed="BtnZoomAll_Pressed" 
+                             Source="{Binding ZoomAllImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                <ImageButton x:Name="BtnZoomIn" Pressed="BtnZoomIn_Pressed" 
+                             Source="{Binding ZoomInImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                <ImageButton x:Name="BtnZoomOut" Pressed="BtnZoomOut_Pressed" 
+                             Source="{Binding ZoomOutImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                
+                <ImageButton x:Name="SelectFrameBtn" Pressed="SelectFrameBtn_Pressed" 
+                             Source="{Binding SelectFrameImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+
+                <ImageButton x:Name="ArrayBtn" Pressed="ArrayBtn_Pressed" 
+                             Source="{Binding ArrayImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+
+                <ImageButton x:Name="CopyBtn" Pressed="CopyBtn_Pressed" 
+                             Source="{Binding CopyImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+
+                <ImageButton x:Name="MirrorBtn" Pressed="MirrorBtn_Pressed" 
+                             Source="{Binding MirrorImage}"
+                             HeightRequest="40" BorderWidth="2" VisualStateManager.VisualStateGroups="{Binding ButtonsVSM}"/>
+
+                <ImageButton x:Name="ButtonCalc" Pressed="ButtonCalc_Clicked" 
+                             Source="{Binding CalculationImage}"
+                             HeightRequest="40" BorderWidth="2"/>
+                
+            </FlexLayout>
+            <StackLayout x:Name="EditorsViews" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+                <issoview:NodeEditor x:Name="nodeEditor" IsVisible="false"></issoview:NodeEditor>
+                <issoview:BindingEditor x:Name="bindingEditor" IsVisible="false"></issoview:BindingEditor>
+                <issoview:LoadEditor x:Name="loadEditor" IsVisible="false"></issoview:LoadEditor>
+                <issoview:LinearView x:Name="linearEditor" IsVisible="false" VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+                <StackLayout x:Name="MirrorConfirmation" IsVisible="False" Orientation="Horizontal">
+                    <Label Text="{Binding SelectedCount, StringFormat='Подтверждаете операцию зеркального отражения {0} объектов?'}" Margin="1"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="Start" VerticalTextAlignment="Center"/>
+                    <Button x:Name="YesMirrorBtn" Text="Да" BackgroundColor="CornflowerBlue" TextColor="White" Margin="1" Pressed="YesMirrorBtn_Pressed"/>
+                    <Button x:Name="NoMirrorBtn" Text="Нет" BackgroundColor="White" BorderColor="Black" TextColor="Black" Margin="1" Pressed="NoMirrorBtn_Pressed"/>
+                </StackLayout>
+                <StackLayout x:Name="CopyEditor" IsVisible="False" Orientation="Horizontal">
+                    <Label Text="Сначала выберите базовую точку, затем укажите место, куда копировать" Margin="1"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="Start" VerticalTextAlignment="Center"/>
+                    <Button x:Name="NoCopyBtn" Text="Закончить" BackgroundColor="White" BorderColor="Black" TextColor="Black" Margin="1" Pressed="NoCopyBtn_Pressed"/>
+                </StackLayout>
+                <issoview:ArrayEditor x:Name="arrayEditor" IsVisible="False"/>
+            </StackLayout>
+            <skia:SKCanvasView x:Name="ModelSurface" HeightRequest="400" 
+                               VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

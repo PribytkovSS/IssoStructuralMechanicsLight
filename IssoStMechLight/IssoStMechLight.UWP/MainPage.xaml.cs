@@ -21,7 +21,7 @@ namespace IssoStMechLight.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new IssoStMechLight.App());
+            LoadApplication(new IssoStMechLight.App(new IssoFilesUWP()));
         }
     }
 }

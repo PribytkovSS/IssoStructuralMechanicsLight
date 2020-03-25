@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using IssoStMechLight.Views;
+using IssoStMechLight.Models;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace IssoStMechLight
@@ -9,12 +10,11 @@ namespace IssoStMechLight
     public partial class App : Application
     {
 
-        public App()
+        public App(IssoFileManager m)
         {
             InitializeComponent();
-
-
-            MainPage = new MainPage();
+            
+            MainPage = new MainPage(m);
         }
 
         protected override void OnStart()

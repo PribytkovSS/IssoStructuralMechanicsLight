@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BindingDimValuePlaceholder" xml:space="preserve">
+    <value>расстояние</value>
+  </data>
+  <data name="ButtonDstLoadLabel" xml:space="preserve">
+    <value>Р. нагрузка</value>
+  </data>
+  <data name="ButtonForceLabel" xml:space="preserve">
+    <value>Сила</value>
+  </data>
+  <data name="ButtonSupportTypeLabel" xml:space="preserve">
+    <value>Тип опоры:</value>
+  </data>
+  <data name="Degrees" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="delete88" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>delete88.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FixedSupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\fixed.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Hinge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Hinge.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="IconClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cancel.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="KiloNewtons" xml:space="preserve">
+    <value>кН</value>
+  </data>
+  <data name="LoadInverse" xml:space="preserve">
+    <value>Инв.</value>
+  </data>
+  <data name="MenuItemCrossSections" xml:space="preserve">
+    <value>Типы сечений</value>
+  </data>
+  <data name="MenuItemElements" xml:space="preserve">
+    <value>Элементы</value>
+  </data>
+  <data name="MenuItemLoads" xml:space="preserve">
+    <value>Нагрузки</value>
+  </data>
+  <data name="MenuItemMaterials" xml:space="preserve">
+    <value>Материалы</value>
+  </data>
+  <data name="MenuItemModel" xml:space="preserve">
+    <value>Модель</value>
+  </data>
+  <data name="MenuItemNodes" xml:space="preserve">
+    <value>Узлы</value>
+  </data>
+  <data name="MenuItemResults" xml:space="preserve">
+    <value>Результаты</value>
+  </data>
+  <data name="ModelActionAddNode" xml:space="preserve">
+    <value>Добавить узел</value>
+  </data>
+  <data name="ModelActionDim" xml:space="preserve">
+    <value>Гор. размер</value>
+  </data>
+  <data name="ModelActionDimA" xml:space="preserve">
+    <value>Угл. размер</value>
+  </data>
+  <data name="ModelActionDimR" xml:space="preserve">
+    <value>Радиус</value>
+  </data>
+  <data name="ModelActionDimV" xml:space="preserve">
+    <value>Верт. размер</value>
+  </data>
+  <data name="ModelActionHinge" xml:space="preserve">
+    <value>Шарнир</value>
+  </data>
+  <data name="ModelActionLinearComponent" xml:space="preserve">
+    <value>Линейный компонент</value>
+  </data>
+  <data name="ModelActionSupport" xml:space="preserve">
+    <value>Опора</value>
+  </data>
+  <data name="ModelCalcCaption" xml:space="preserve">
+    <value>Расчёт</value>
+  </data>
+  <data name="ModelNewLabel" xml:space="preserve">
+    <value>Новая</value>
+  </data>
+  <data name="NodeEditorAngleLabel" xml:space="preserve">
+    <value>Угол наклона к оси X:</value>
+  </data>
+  <data name="NodeEditorCoordinates" xml:space="preserve">
+    <value>Координаты (x; y):</value>
+  </data>
+  <data name="PinInternalSupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pininternal.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PinSupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pin.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Rigid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Rigid.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RollerInternalSupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\rollerinternal.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RollerSupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\roller.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToSupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\ToSupport.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ZoomAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>ZoomAll.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MenuItemSetup" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="SetupDisplayElementNumbers" xml:space="preserve">
+    <value>Номера элементов</value>
+  </data>
+  <data name="SetupDisplayLoadValues" xml:space="preserve">
+    <value>Интенсивность нагрузок</value>
+  </data>
+  <data name="SetupDisplayNodeNumbers" xml:space="preserve">
+    <value>Номера узлов</value>
+  </data>
+  <data name="SetupDisplayRigidity" xml:space="preserve">
+    <value>Относительная жёсткость весом линий</value>
+  </data>
+  <data name="SetupDisplayTitle" xml:space="preserve">
+    <value>Отображение</value>
+  </data>
+  <data name="SetupSnapTitle" xml:space="preserve">
+    <value>Привязки</value>
+  </data>
+  <data name="SetupSnapToGrid" xml:space="preserve">
+    <value>Привязка к сетке</value>
+  </data>
+  <data name="SetupSnapToNodes" xml:space="preserve">
+    <value>Привязка к координатам узлов</value>
+  </data>
+  <data name="ZoomIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>ZoomIn.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ZoomOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>ZoomOut.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Calculation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Calculation.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DistLoad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>DistLoad.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Force" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Force.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HorizDimension" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>HorizDimension.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Linear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Linear.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NewModel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>NewModel.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="VertDimension" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>VertDimension.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MenuItemLoad" xml:space="preserve">
+    <value>Загрузить</value>
+  </data>
+  <data name="MenuItemSave" xml:space="preserve">
+    <value>Сохранить как</value>
+  </data>
+  <data name="Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Open.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Redo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Save.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Undo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AddSection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>AddSection.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rename" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rename.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Array" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Array.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Copy.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mirror" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Mirror.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SelectFrame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>SelectFrame.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

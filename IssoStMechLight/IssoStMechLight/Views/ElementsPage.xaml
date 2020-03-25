@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IssoStMechLight.Views.ElementsPage"
+             xmlns:linearEditor="clr-namespace:IssoStMechLight.Views">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="GroupHeaderStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Характеристики элементов" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Style="{DynamicResource SubtitleStyle}"/>
+            <linearEditor:LinearView/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

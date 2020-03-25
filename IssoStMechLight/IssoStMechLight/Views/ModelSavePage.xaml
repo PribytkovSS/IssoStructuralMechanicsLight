@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IssoStMechLight.Views.ModelSavePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Имя файла" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold"/>
+            <BoxView HeightRequest="1" Color="Black" VerticalOptions="Start" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label x:Name="FileNameEntry" ></Label>
+            <BoxView HeightRequest="1" Color="Black" VerticalOptions="Start" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Место" VerticalOptions="Start" HorizontalOptions="Start"  FontAttributes="Bold"/>
+            <BoxView HeightRequest="1" Color="Black" VerticalOptions="Start" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label x:Name="LocationEntry"></Label>
+            <BoxView HeightRequest="1" Color="Black" VerticalOptions="Start" HorizontalOptions="FillAndExpand"></BoxView>
+            <FlexLayout Direction="Row">
+                <Button x:Name="SaveButton" Image="save.png" Pressed="SaveButton_Pressed" Text="Сохранить" BackgroundColor="White" BorderColor="DarkSlateGray"></Button>
+                <Button x:Name="SaveButtonAs" Pressed="SaveButton_Pressed" Text="Сохранить как" BackgroundColor="CornflowerBlue" TextColor="White"></Button>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

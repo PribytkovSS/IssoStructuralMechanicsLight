@@ -10,29 +10,22 @@ namespace IssoStMechLight.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
-        Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
-        public MainPage()
+        Dictionary<int, NavigationPage> MenuPages = MenuPage.InitMenuPages();
+        public IssoFileManager FileManager;
+
+        public MainPage(IssoFileManager m)
         {
             InitializeComponent();
-
-            MasterBehavior = MasterBehavior.Popover;
-
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            FileManager = m;
+            MasterBehavior = MasterBehavior.SplitOnLandscape;
+            Detail = MenuPages[0];
         }
 
         public async Task NavigateFromMenu(int id)
         {
             if (!MenuPages.ContainsKey(id))
             {
-                switch (id)
-                {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                        break;
-                }
+                MenuPages.Add(id, new NavigationPage(new NotImplementedPage()));
             }
 
             var newPage = MenuPages[id];
@@ -43,8 +36,6 @@ namespace IssoStMechLight.Views
 
                 if (Device.RuntimePlatform == Device.Android)
                     await Task.Delay(100);
-
-                IsPresented = false;
             }
         }
     }

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IssoStMechLight.Views.LinearView">
+  <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="GroupHeaderStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+  <ContentView.Content>
+        <ListView x:Name="ElementsListView" ItemsSource="{Binding ModelBeams}" SeparatorVisibility="Default" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+            <ListView.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="№" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Узлы" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Style="{StaticResource GroupHeaderStyle}"
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Начало" Grid.Row="1" Grid.Column="1" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Шарнир" Grid.Row="1" Grid.Column="2" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Конец" Grid.Row="1" Grid.Column="3" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Шарнир" Grid.Row="1" Grid.Column="4" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Сечение" Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="4" Style="{StaticResource GroupHeaderStyle}"
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Тип" Grid.Row="1" Grid.Column="5" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Площадь" Grid.Row="1" Grid.Column="6" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Момент инерции" Grid.Row="1" Grid.Column="7" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Модуль упругости" Grid.Row="1" Grid.Column="8" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding BeamIndex}" IsVisible="{Binding OnlySelected}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Node1Desc}" IsVisible="{Binding OnlySelected}" Grid.Row="0" Grid.Column="1" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <CheckBox IsChecked="{Binding HingeStart}" Grid.Row="0" Grid.Column="2" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding Node2Desc}" IsVisible="{Binding OnlySelected}" Grid.Row="0" Grid.Column="3" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <CheckBox IsChecked="{Binding HingeEnd}" Grid.Row="0" Grid.Column="4" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Picker ItemsSource="{Binding CrossSections}" SelectedIndex="{Binding ElementSectionId}" Grid.Row="0" Grid.Column="5" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding SectionArea, StringFormat='{0:E2}'}" Grid.Row="0" Grid.Column="6" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding SectionInertia, StringFormat='{0:E2}'}" Grid.Row="0" Grid.Column="7" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding MaterialElasticity, StringFormat='{0:E2}'}" Grid.Row="0" Grid.Column="8" 
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentView.Content>
+</ContentView>

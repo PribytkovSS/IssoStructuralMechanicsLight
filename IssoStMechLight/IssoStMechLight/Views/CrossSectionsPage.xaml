@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="IssoStMechLight.Views.CrossSectionsPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="PageLayout" Padding="5" Margin="5">
+            <Label Text="Сечения, используемые в модели" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HorizontalTextAlignment="Center"></Label>
+            <FlexLayout x:Name="SectionListToolBar" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
+            <FlexLayout x:Name="SectionNameEdit" IsVisible="False" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                <Label x:Name="SectionNameLabel" VerticalTextAlignment="Center" HorizontalOptions="Start"></Label>
+                <Entry x:Name="SectionNameEntry" IsTextPredictionEnabled="true" Completed="SectionNameEntry_Completed" HorizontalOptions="FillAndExpand" WidthRequest="300"></Entry>
+            </FlexLayout>
+            <ListView x:Name="SectionsListView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ItemsSource="{Binding SectionList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <FlexLayout Margin="10">
+                                    <Label Text="Имя:" VerticalTextAlignment="Center" Margin="5"/>
+                                    <Entry Text="{Binding SectionName}" WidthRequest="100"/>
+
+                                    <Label Text="Площадь:"  VerticalTextAlignment="Center" Margin="5"/>
+                                    <Entry Text="{Binding SectionArea}" WidthRequest="100"/>
+
+                                    <Label Text="Момент инерции:"  VerticalTextAlignment="Center" Margin="5"/>
+                                    <Entry Text="{Binding SectionInertia}" WidthRequest="100" />
+
+                                    <Label Text="Модуль упругости:"  VerticalTextAlignment="Center" Margin="5"/>
+                                    <Entry Text="{Binding MaterialElasticity}" WidthRequest="100"/>
+                                </FlexLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <FlexLayout x:Name="MaterialLibView" IsVisible="False" HorizontalOptions="Fill" VerticalOptions="Fill">
+                <ListView x:Name="MaterialLibList" ItemSelected="MaterialLibList_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding MaterialLibName}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView x:Name="MaterialLibItems" ItemSelected="MaterialLibItems_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding MaterialName}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button x:Name="MaterialSelectButton" Text="Выбрать" Pressed="MaterialSelectButton_Pressed"/>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

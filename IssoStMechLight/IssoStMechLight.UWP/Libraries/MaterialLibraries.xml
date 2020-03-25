@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<IssoMaterialLibaries xmlns:x="isso">
+  <x:Libraries>
+    <x:Lib1 x:Name="СНиП 2.05.03-84*">
+        <x:Material1 x:Name="Бетон B10" x:EModulus="32,5E+9"/>
+        <x:Material2 x:Name="Сталь" x:EModulus="2,1E+11"/>
+    </x:Lib1>    
+    <x:Lib2 x:Name="Some other Lib">
+        <x:Material1 x:Name="Concrete" x:EModulus="32,5E+9"/>
+        <x:Material2 x:Name="Steel" x:EModulus="2,1E+11"/>
+        <x:Material3 x:Name="Wood" x:EModulus="3,0E+7"/>
+    </x:Lib2>    
+  </x:Libraries>
+</IssoMaterialLibaries>
